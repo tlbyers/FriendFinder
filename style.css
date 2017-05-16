@@ -1,0 +1,12 @@
+body {
+    background-image: url(images/people.jpg);
+    background-size: 100%; 
+}
+
+.jumbotron {
+    background-color:#FFA04A;
+    color:#0066cc;
+    border:solid;
+    border-color:#0066cc;
+    font-family: "Times New Roman", Georgia, Serif;
+}
