@@ -7,11 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script>$(document).ready(function(){
-    $("form").submit(function(){
-        alert("Submitted");
-        });
-    });
+  
 </script>
 </head>
 <body>
@@ -153,66 +149,47 @@
         </div>
     </footer>
 
-
   </div>
+  </body>
+  </html>
 
   <script type="text/javascript">
 
     // Capture the form inputs 
     $("#submit").on("click", function(){
         console.log("I am here!")
-        // Form validation
-      function validateForm() {
-        var isValid = true;
-        $('.form-control').each(function() {
-          if ( $(this).val() === '' )
-          isValid = false;
-        });
-
-        $('.chosen-select').each(function() {
-
-        if( $(this).val() === "")
-        isValid = false
-        })
-        return isValid;
-       }
-
+        event.preventDefault();
+       
         // If all required fields are filled
 
-      if (validateForm() == true){
-
+      
         // Create an object for the user's data
 
         var userData = {
 
-        name: $("#name").val(),
-        photo: $("#photo").val(),
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
         scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
 
-        }
+        };
 
 
             console.log(userData);
     
-        // Grab the URL of the website
-        var currentURL = window.location.origin;
-
+       
         // AJAX post the data to the friends API. 
-          $.post("/api/friends", userData, function(data){
+     $.post("/api/friends", userData, function(data){
             console.log("friends")
-        });
-       }
-              
-      else
-        {
-            alert("Please fill out all fields before submitting!");
-        }
         
-        return false;
+                     
+      
+     // Clear the form when submitting
+      $("#name").val("");
+      $("#photo").val("");
+      [$("#q1").val(""), $("#q2").val(""), $("#q3").val(""), $("#q4").val(""), $("#q5").val(""), $("#q6").val(""), $("#q7").val(""), $("#q8").val(""), $("#q9").val(""), $("#q10").val("")];
     });
+  });
 
   </script>
 
-</body>
-</html>
 
