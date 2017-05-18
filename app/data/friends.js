@@ -15,7 +15,7 @@ var friends=[
         4,
         1
       ]
-  }
+  },
 
   {
     name:"Johnny Depp",
@@ -32,7 +32,7 @@ var friends=[
         2,
         1
       ]
-  }
+  },
 
   {
     name:"Tom Hanks",
@@ -49,7 +49,7 @@ var friends=[
         5,
         
       ]
-  }
+  },
 
   {
     name:"Brad Pitt",
@@ -66,7 +66,7 @@ var friends=[
         4,
         1
       ]
-  }
+  },
 
   {
     name:"Bruce Willis",
@@ -83,7 +83,7 @@ var friends=[
         4,
         1
       ]
-  }
+  },
 
   {
     name:"George Clooney",
