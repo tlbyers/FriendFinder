@@ -17,13 +17,13 @@ module.exports = function(app){
 
 		var greatMatch = {
 			name: "",
-			image: "",
+			photo: "",
 			matchDifference: 1000
 		};
-		var usrData 	= req.body;
-		var usrName 	= usrData.name;
-		var usrImage 	= usrData.image;
-		var usrScores 	= usrData.scores;
+		var userData 	= req.body;
+		var userName 	= userData.name;
+		var userPhoto 	= userData.photo;
+		var userScores 	= userData.scores;
 
 		var totalDifference = 0;
 
